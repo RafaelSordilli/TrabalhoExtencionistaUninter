@@ -1,0 +1,155 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Container Central */
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Botão para enviar resposta*/
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.75s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+button:hover {
+    background-color: #45a049;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos Formulários de Quiz */
+form label {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form label:hover {
+    background-color: #e0e0e0;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Estilos de Feedback para Respostas Corretas e Incorretas */
+.correta {
+    color: #28a745; 
+    font-weight: bold;
+}
+
+.incorreta {
+    color: #dc3545; 
+    font-weight: bold;
+}
+
+/* Resultado do Quiz */
+#resultado {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Rodapé para Instruções */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    padding-top: 60px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; 
+    text-align: center;
+}
+
+.botao-retorno {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-retorno:hover {
+    background-color: #0056b3;
+}

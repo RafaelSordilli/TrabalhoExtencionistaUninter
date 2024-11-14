@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2 - Navegando na Internet</title>
+    <link rel="shortcut icon" href="icone/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <button type="button" onclick="voltar()" class="botao-retorno">Voltar</button>
+
+    <h2>Módulo 2 - Navegando na Internet</h2>
+    <p>1. Abra o navegador de sua escolha. O ícone geralmente é uma bola colorida.</p>
+    <button onclick="proximaInstrucao()">Próxima Instrução</button>
+</div>
+
+<script>
+    let instrucaoAtual = 1;
+    const instrucoes = [
+        "Abra o navegador de sua escolha. O ícone geralmente é uma bola colorida.",
+        "Na barra de endereços, digite o URL que você deseja visitar e pressione Enter.",
+        "Para voltar, use o botão de voltar no navegador ou pressione a tecla 'Backspace'.",
+        "Parabéns! Você completou o módulo. Clique no botão abaixo para iniciar o quiz.",
+    ];
+
+    function proximaInstrucao() {
+        instrucaoAtual++;
+        if (instrucaoAtual < instrucoes.length) {
+            document.querySelector("p").textContent = instrucoes[instrucaoAtual];
+        } else {
+            window.location.href = 'quiz2.html';
+        }
+    }
+</script>
+<script>
+    function voltar() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>
